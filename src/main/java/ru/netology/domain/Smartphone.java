@@ -16,4 +16,11 @@ public class Smartphone extends Product {
         super(id, name, price);
         this.fabricator = fabricator;
     }
+
+    @Override
+    public boolean matches(String text) {
+        if (super.matches(text))
+            return true;
+        else return text.equalsIgnoreCase(fabricator);
+    }
 }
