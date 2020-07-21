@@ -29,6 +29,13 @@ public class ProductManagerTest {
     }
 
     @Test
+    void shouldSearchByAuthor() {
+        Product[] expected = {first};
+        Product[] actual = productManager.searchBy("author1");
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
     void shouldSearchByName() {
         Product[] expected = {second};
         Product[] actual = productManager.searchBy("Name2");
@@ -44,8 +51,8 @@ public class ProductManagerTest {
 
     @Test
     void shouldSearchByFabricator() {
-        Product[] expected = {fourth};
-        Product[] actual = productManager.searchBy("Name4");
+        Product[] expected = {third,fourth};
+        Product[] actual = productManager.searchBy("fabric1");
         assertArrayEquals(expected, actual);
     }
 

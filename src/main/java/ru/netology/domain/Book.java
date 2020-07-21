@@ -19,9 +19,11 @@ public class Book extends Product {
 
     @Override
     public boolean matches(String search) {
-        if (super.matches(search))
+        if (super.matches(search)) {
             return true;
-        else return search.equalsIgnoreCase(author);
+        } else {
+            return search.equalsIgnoreCase(author);
+        }
     }
 
 }

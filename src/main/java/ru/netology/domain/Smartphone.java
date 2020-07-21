@@ -19,8 +19,10 @@ public class Smartphone extends Product {
 
     @Override
     public boolean matches(String text) {
-        if (super.matches(text))
+        if (super.matches(text)) {
             return true;
-        else return text.equalsIgnoreCase(fabricator);
+        } else {
+            return text.equalsIgnoreCase(fabricator);
+        }
     }
 }
